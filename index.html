@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Purchase Order Form</h1>
+        <form id="purchaseOrderForm">
+            <label for="poNumber">PO Number:</label>
+            <input type="text" id="poNumber" required>
+            <br><br>
+
+            <label for="vendor">Vendor:</label>
+            <input type="text" id="vendor" required>
+            <br><br>
+
+            <label for="date">Order Date:</label>
+            <input type="date" id="date" required>
+            <br><br>
+
+            <label for="items">Items (format: Item1, Quantity, Price):</label>
+            <textarea id="items" rows="5" cols="30"></textarea>
+            <br><br>
+
+            <button type="button" onclick="savePurchaseOrder()">Save Order</button>
+            <button type="button" onclick="exportEDI850()">Export as EDI 850</button>
+        </form>
+
+        <p id="output"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

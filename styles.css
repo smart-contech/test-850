@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
 }
@@ -14,43 +14,49 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+h1, h2 {
+    color: #333;
 }
 
 label {
-    font-weight: bold;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    display: block;
 }
 
-input, textarea {
-    margin-bottom: 15px;
-    padding: 10px;
+input[type="text"], input[type="number"], input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
 button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 10px 15px;
+    margin-right: 10px;
     border: none;
+    background-color: #5cb85c;
+    color: white;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #45a049;
-}
-
-#output {
-    margin-top: 20px;
-    font-style: italic;
-    color: green;
+    background-color: #4cae4c;
 }

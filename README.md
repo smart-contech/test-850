@@ -1,25 +1,38 @@
-# Purchase Order Application
+# Aplicación de Captura de Orden de Compra
 
-This is a basic web application to create a purchase order, save it in JSON format, and export it as an EDI 850 file or JSON file.
+Esta es una aplicación sencilla para capturar y exportar órdenes de compra en formato JSON y EDI 850.
 
-## Features
+## Estructura del Proyecto
 
-- Create a purchase order by filling out the form.
-- Save the purchase order in memory as a JSON object.
-- Export the purchase order as an EDI 850 file.
-- Export the purchase order as a JSON file.
+El proyecto contiene los siguientes archivos:
 
-## How to Run
+- `index.html`: Archivo principal que contiene la estructura HTML.
+- `script.js`: Archivo JavaScript que maneja la lógica de la aplicación.
+- `styles.css`: Archivo CSS para los estilos de la aplicación.
+- `README.md`: Este archivo de documentación.
 
-1. Clone the repository or download the files.
-2. Open the `index.html` file in a web browser.
-3. Fill in the form fields for the purchase order.
-4. Click "Save Order" to save the order in memory.
-5. Click "Export as EDI 850" to download the purchase order as an EDI 850 file.
-6. Click "Export as JSON" to download the purchase order as a JSON file.
+## Funcionalidades
 
-## File Structure
+- **Agregar Ítems**: Permite agregar múltiples ítems a la orden de compra.
+- **Guardar Orden de Compra**: Guarda la información de la orden de compra y los ítems en formato JSON.
+- **Exportar a EDI 850**: Exporta la orden de compra en formato EDI 850.
+- **Exportar a JSON**: Exporta la orden de compra en formato JSON.
+- **Cargar JSON**: Permite cargar una orden de compra desde un archivo JSON.
 
-- `index.html` - The main HTML file with the form.
-- `script.js` - JavaScript code for handling the form data and exporting the EDI and JSON files.
-- `styles.css` - CSS file for basic styling.
+## Cómo Usar la Aplicación
+
+1. Abre el archivo `index.html` en un navegador web.
+2. Completa los campos de la orden de compra (Número de Orden, Vendedor, Fecha).
+3. Agrega los ítems que desees.
+4. Haz clic en "Guardar Orden de Compra" para guardar la información.
+5. Usa los botones "Exportar a EDI 850" y "Exportar a JSON" para descargar la orden en los respectivos formatos.
+6. Usa el botón "Cargar JSON" para cargar una orden previamente guardada desde un archivo JSON.
+
+## Control de Versiones
+
+- **v1.0**: Versión inicial con funcionalidades básicas de captura y exportación de órdenes de compra.
+- **v1.1**: Mejoras en la interfaz de usuario y en la funcionalidad de exportación.
+
+## Créditos
+
+Esta aplicación fue creada para fines educativos y de práctica de desarrollo web.

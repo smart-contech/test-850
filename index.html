@@ -1,37 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purchase Order</title>
+    <title>Captura de Items</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Purchase Order Form</h1>
-        <form id="purchaseOrderForm">
-            <label for="poNumber">PO Number:</label>
-            <input type="text" id="poNumber" required>
-            <br><br>
+        <h1>Captura de Items</h1>
 
-            <label for="vendor">Vendor:</label>
-            <input type="text" id="vendor" required>
-            <br><br>
+        <label for="poNumber">Número de Orden de Compra:</label>
+        <input type="text" id="poNumber" placeholder="Número de Orden de Compra">
 
-            <label for="date">Order Date:</label>
-            <input type="date" id="date" required>
-            <br><br>
+        <label for="vendor">Vendedor:</label>
+        <input type="text" id="vendor" placeholder="Nombre del Vendedor">
 
-            <label for="items">Items (format: Item1, Quantity, Price):</label>
-            <textarea id="items" rows="5" cols="30"></textarea>
-            <br><br>
+        <label for="date">Fecha:</label>
+        <input type="date" id="date">
 
-            <button type="button" onclick="savePurchaseOrder()">Save Order</button>
-            <button type="button" onclick="exportEDI850()">Export as EDI 850</button>
-            <button type="button" onclick="exportJSON()">Export as JSON</button> <!-- Nuevo botón para exportar JSON -->
-        </form>
+        <h2>Ítems de la Orden de Compra</h2>
+        <table id="itemsGrid">
+            <thead>
+                <tr>
+                    <th>Descripción del Ítem</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="itemName" placeholder="Descripción del ítem"></td>
+                    <td><input type="number" class="quantity" placeholder="Cantidad" min="1"></td>
+                    <td><input type="number" class="unitPrice" placeholder="Precio Unitario" step="0.01"></td>
+                </tr>
+            </tbody>
+        </table>
 
-        <p id="output"></p>
+        <button onclick="addItem()">Agregar Ítem</button>
+        <button id="saveBtn" onclick="savePurchaseOrder()">Guardar Orden de Compra</button>
+        <button id="exportEdiBtn" onclick="exportEDI850()">Exportar a EDI 850</button>
+        <button id="exportJsonBtn" onclick="exportJSON()">Exportar a JSON</button>
+        <button id="loadJsonBtn" onclick="loadJSON()">Cargar JSON</button>
+
+        <div id="output"></div>
     </div>
 
     <script src="script.js"></script>

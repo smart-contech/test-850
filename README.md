@@ -1,14 +1,13 @@
 # Purchase Order Application
 
-This is a basic web application to create a purchase order, save it in JSON format, and export it as an EDI 850 file.
+This is a basic web application to create a purchase order and export it as an EDI 850 file.
 
 ## How to Run
 
 1. Clone the repository or download the files.
 2. Open the `index.html` file in a web browser.
 3. Fill in the form fields for the purchase order.
-4. Click "Save Order" to save the order in memory.
-5. Click "Export as EDI 850" to download the purchase order as an EDI 850 file.
+4. Click "Export as EDI 850" to download the purchase order as an EDI 850 file.
 
 ## File Structure
 

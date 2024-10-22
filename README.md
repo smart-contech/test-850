@@ -36,3 +36,4 @@ El proyecto contiene los siguientes archivos:
 ## Créditos
 
 Esta aplicación fue creada para fines educativos y de práctica de desarrollo web.
+Se prueba algunos elementos de seguridad.
